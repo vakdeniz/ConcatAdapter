@@ -19,7 +19,6 @@
         android:id="@+id/animalItemTitleTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/small"
-        tools:text="Cat" />
+        android:layout_marginTop="@dimen/small" />
 
 </LinearLayout>
