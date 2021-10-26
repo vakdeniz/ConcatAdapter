@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.10092592592592593" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.10092592592592593" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/animal_data_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/concat_row.xml" value="0.20471014492753623" />
+        <entry key="app/src/main/res/layout/fragment_concat_adapter.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/horizontal_concat_row.xml" value="0.20878623188405798" />
+        <entry key="app/src/main/res/layout/layout_toolbar.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.10092592592592593" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.10092592592592593" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
