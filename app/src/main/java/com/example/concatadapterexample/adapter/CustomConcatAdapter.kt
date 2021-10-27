@@ -17,7 +17,7 @@ class CustomConcatAdapter(
     private val context: Context,
     private val title: String,
     private val adapterType: AdapterType,
-    private val adapter: ListAdapter<out Serializable, out RecyclerView.ViewHolder>,
+    private val adapter: ListAdapter<out Serializable, out RecyclerView.ViewHolder>
 ) : RecyclerView.Adapter<CustomConcatViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomConcatViewHolder {

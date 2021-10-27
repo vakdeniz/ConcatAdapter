@@ -2,11 +2,13 @@ package com.example.concatadapterexample.fragments
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.concatadapterexample.R
+import com.example.concatadapterexample.adapter.AnimalAdapterListener
 import com.example.concatadapterexample.adapter.AnimalDataAdapter
 import com.example.concatadapterexample.adapter.CustomConcatAdapter
 import com.example.concatadapterexample.injection.ViewModelFactory
@@ -15,7 +17,7 @@ import com.example.concatadapterexample.viewmodel.ConcatAdapterViewModel
 
 class ConcatAdapterFragment(
     private val viewModelFactory: ViewModelFactory
-) : Fragment(R.layout.fragment_concat_adapter) {
+) : Fragment(R.layout.fragment_concat_adapter), AnimalAdapterListener {
 
     private val viewModel: ConcatAdapterViewModel by viewModels { viewModelFactory }
 
@@ -35,7 +37,7 @@ class ConcatAdapterFragment(
 
     private fun updateConcatAdapter(concatAdapterDataModel: ConcatAdapterDataModel) {
 
-        val animalDataAdapter = AnimalDataAdapter() // Different ListAdapters can be created here
+        val animalDataAdapter = AnimalDataAdapter(listener = this) // Different ListAdapters can be created here
 
         val newAdapter = CustomConcatAdapter(
             requireContext(),
@@ -51,5 +53,14 @@ class ConcatAdapterFragment(
     private fun initViews() {
         concatRecyclerView = requireView().findViewById(R.id.concatRV)
         concatRecyclerView.adapter = concatAdapter
+    }
+
+    override fun animalItemClick(title: String) {
+        // Do you action here
+        Toast.makeText(
+            requireActivity().applicationContext,
+            "Clicked item title $title",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }
